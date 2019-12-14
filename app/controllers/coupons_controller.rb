@@ -9,7 +9,8 @@ class CouponsController < ApplicationController
   end
 
   def new
-    @coupon = Coupon.new
+    #posted solution did not have anything inside method
+    # @coupon = Coupon.new
   end
 
   def create
@@ -19,5 +20,14 @@ class CouponsController < ApplicationController
     @coupon.save
     redirect_to coupon_path(@coupon)
   end
+
+#posted solution:
+  # def create
+  #   @coupon = Coupon.new
+  #   @coupon[:coupon_code] = params[:coupon][:coupon_code]
+  #   @coupon[:store] = params[:coupon][:store]
+  #   @coupon.save
+  #   redirect_to coupon_path(@coupon)
+  # end
 
 end
