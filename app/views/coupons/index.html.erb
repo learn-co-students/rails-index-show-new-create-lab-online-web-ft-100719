@@ -1,0 +1,4 @@
+<h1>All Coupons!</h1>
+<% @coupons.each do |coupon| %>
+  <div id="coupon<%= coupon.id %>"><%= link_to("Coupon code: #{coupon.coupon_code} Coupon Store: #{coupon.store}", coupon) %></div>
+<% end %>
