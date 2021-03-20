@@ -1,0 +1,14 @@
+<% if @coupons.blank? %>
+    <p>There are no coupons available.</p>
+<% else %>
+    <p>These are the coupons available</p>
+
+    <ul id = "coupons">
+    <% @coupons.each do |c| %>
+        <li><%= link_to c.coupon_code, coupon_path(c) %> | <%= c.store %></li>
+            
+    <% end %>
+    </ul>
+
+<% end %>
+<p><%= link_to "Add new coupon", new_coupon_path%></p>
